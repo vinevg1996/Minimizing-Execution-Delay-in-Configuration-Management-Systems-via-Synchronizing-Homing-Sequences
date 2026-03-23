@@ -1,0 +1,103 @@
+- name: Remove text.txt with timing
+  hosts: myhosts
+  gather_facts: false
+  tasks:
+    - name: Record start time (remove file)
+      ansible.builtin.command: date +%s%N
+      register: start_remove
+
+    - name: Remove text.txt
+      ansible.builtin.file:
+        path: /home/vinevg1996/work_france/rtas26/ansible_quickstart/text.txt
+        state: absent
+
+    - name: Record end time (remove file)
+      ansible.builtin.command: date +%s%N
+      register: end_remove
+
+    - name: Print remove file execution time
+      ansible.builtin.debug:
+        msg: >
+          remove file task time: {{
+            ((end_remove.stdout | int) - (start_remove.stdout | int)) / 1000000
+          }} ms
+
+    - name: Record start time (remove file)
+      ansible.builtin.command: date +%s%N
+      register: start_remove
+
+    - name: Remove text.txt
+      ansible.builtin.file:
+        path: /home/vinevg1996/work_france/rtas26/ansible_quickstart/text.txt
+        state: absent
+
+    - name: Record end time (remove file)
+      ansible.builtin.command: date +%s%N
+      register: end_remove
+
+    - name: Print remove file execution time
+      ansible.builtin.debug:
+        msg: >
+          remove file task time: {{
+            ((end_remove.stdout | int) - (start_remove.stdout | int)) / 1000000
+          }} ms
+
+    - name: Record start time (remove file)
+      ansible.builtin.command: date +%s%N
+      register: start_remove
+
+    - name: Remove text.txt
+      ansible.builtin.file:
+        path: /home/vinevg1996/work_france/rtas26/ansible_quickstart/text.txt
+        state: absent
+
+    - name: Record end time (remove file)
+      ansible.builtin.command: date +%s%N
+      register: end_remove
+
+    - name: Print remove file execution time
+      ansible.builtin.debug:
+        msg: >
+          remove file task time: {{
+            ((end_remove.stdout | int) - (start_remove.stdout | int)) / 1000000
+          }} ms
+
+    - name: Record start time (remove file)
+      ansible.builtin.command: date +%s%N
+      register: start_remove
+
+    - name: Remove text.txt
+      ansible.builtin.file:
+        path: /home/vinevg1996/work_france/rtas26/ansible_quickstart/text.txt
+        state: absent
+
+    - name: Record end time (remove file)
+      ansible.builtin.command: date +%s%N
+      register: end_remove
+
+    - name: Print remove file execution time
+      ansible.builtin.debug:
+        msg: >
+          remove file task time: {{
+            ((end_remove.stdout | int) - (start_remove.stdout | int)) / 1000000
+          }} ms
+
+    - name: Record start time (remove file)
+      ansible.builtin.command: date +%s%N
+      register: start_remove
+
+    - name: Remove text.txt
+      ansible.builtin.file:
+        path: /home/vinevg1996/work_france/rtas26/ansible_quickstart/text.txt
+        state: absent
+
+    - name: Record end time (remove file)
+      ansible.builtin.command: date +%s%N
+      register: end_remove
+
+    - name: Print remove file execution time
+      ansible.builtin.debug:
+        msg: >
+          remove file task time: {{
+            ((end_remove.stdout | int) - (start_remove.stdout | int)) / 1000000
+          }} ms

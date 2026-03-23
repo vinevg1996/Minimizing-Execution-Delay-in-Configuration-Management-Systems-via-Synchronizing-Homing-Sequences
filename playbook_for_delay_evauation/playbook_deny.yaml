@@ -1,0 +1,100 @@
+- name: Deny traffic from specific IP with timing
+  hosts: myhosts
+  become: true
+  gather_facts: false
+  tasks:
+    - name: Record start time (deny IP)
+      ansible.builtin.command: date +%s%N
+      register: start_deny
+
+    - name: Deny traffic from 192.168.233.21
+      ansible.builtin.ufw:
+        rule: deny
+        from_ip: 192.168.233.21
+
+    - name: Record end time (deny IP)
+      ansible.builtin.command: date +%s%N
+      register: end_deny
+
+    - name: Print firewall rule execution time
+      ansible.builtin.debug:
+        msg: >
+          firewall rule task time: {{
+            ((end_deny.stdout | int) - (start_deny.stdout | int)) / 1000000
+          }} ms
+    - name: Record start time (deny IP)
+      ansible.builtin.command: date +%s%N
+      register: start_deny
+
+    - name: Deny traffic from 192.168.233.21
+      ansible.builtin.ufw:
+        rule: deny
+        from_ip: 192.168.233.21
+
+    - name: Record end time (deny IP)
+      ansible.builtin.command: date +%s%N
+      register: end_deny
+
+    - name: Print firewall rule execution time
+      ansible.builtin.debug:
+        msg: >
+          firewall rule task time: {{
+            ((end_deny.stdout | int) - (start_deny.stdout | int)) / 1000000
+          }} ms
+    - name: Record start time (deny IP)
+      ansible.builtin.command: date +%s%N
+      register: start_deny
+
+    - name: Deny traffic from 192.168.233.21
+      ansible.builtin.ufw:
+        rule: deny
+        from_ip: 192.168.233.21
+
+    - name: Record end time (deny IP)
+      ansible.builtin.command: date +%s%N
+      register: end_deny
+
+    - name: Print firewall rule execution time
+      ansible.builtin.debug:
+        msg: >
+          firewall rule task time: {{
+            ((end_deny.stdout | int) - (start_deny.stdout | int)) / 1000000
+          }} ms
+    - name: Record start time (deny IP)
+      ansible.builtin.command: date +%s%N
+      register: start_deny
+
+    - name: Deny traffic from 192.168.233.21
+      ansible.builtin.ufw:
+        rule: deny
+        from_ip: 192.168.233.21
+
+    - name: Record end time (deny IP)
+      ansible.builtin.command: date +%s%N
+      register: end_deny
+
+    - name: Print firewall rule execution time
+      ansible.builtin.debug:
+        msg: >
+          firewall rule task time: {{
+            ((end_deny.stdout | int) - (start_deny.stdout | int)) / 1000000
+          }} ms
+    - name: Record start time (deny IP)
+      ansible.builtin.command: date +%s%N
+      register: start_deny
+
+    - name: Deny traffic from 192.168.233.21
+      ansible.builtin.ufw:
+        rule: deny
+        from_ip: 192.168.233.21
+
+    - name: Record end time (deny IP)
+      ansible.builtin.command: date +%s%N
+      register: end_deny
+
+    - name: Print firewall rule execution time
+      ansible.builtin.debug:
+        msg: >
+          firewall rule task time: {{
+            ((end_deny.stdout | int) - (start_deny.stdout | int)) / 1000000
+          }} ms

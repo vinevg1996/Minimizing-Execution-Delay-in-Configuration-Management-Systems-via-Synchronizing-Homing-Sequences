@@ -1,0 +1,165 @@
+- name: Check if IP is allowed in UFW with timing
+  hosts: myhosts
+  become: true
+  gather_facts: false
+  tasks:
+    - name: Record start time (check)
+      ansible.builtin.command: date +%s%N
+      register: start_check
+
+    - name: Get UFW status
+      ansible.builtin.command: ufw status
+      register: ufw_status
+      changed_when: false
+
+    - name: Check if 192.168.233.21 is allowed
+      ansible.builtin.set_fact:
+        ip_allowed: "{{ 'ALLOW IN from 192.168.233.21' in ufw_status.stdout }}"
+
+    - name: Record end time (check)
+      ansible.builtin.command: date +%s%N
+      register: end_check
+
+    - name: Print result
+      ansible.builtin.debug:
+        msg: >
+          Traffic from 192.168.233.21 is {{
+            'ALLOWED' if ip_allowed else 'NOT allowed'
+          }}
+
+    - name: Print check execution time
+      ansible.builtin.debug:
+        msg: >
+          firewall check task time: {{
+            ((end_check.stdout | int) - (start_check.stdout | int)) / 1000000
+          }} ms
+
+
+    - name: Record start time (check)
+      ansible.builtin.command: date +%s%N
+      register: start_check
+
+    - name: Get UFW status
+      ansible.builtin.command: ufw status
+      register: ufw_status
+      changed_when: false
+
+    - name: Check if 192.168.233.21 is allowed
+      ansible.builtin.set_fact:
+        ip_allowed: "{{ 'ALLOW IN from 192.168.233.21' in ufw_status.stdout }}"
+
+    - name: Record end time (check)
+      ansible.builtin.command: date +%s%N
+      register: end_check
+
+    - name: Print result
+      ansible.builtin.debug:
+        msg: >
+          Traffic from 192.168.233.21 is {{
+            'ALLOWED' if ip_allowed else 'NOT allowed'
+          }}
+
+    - name: Print check execution time
+      ansible.builtin.debug:
+        msg: >
+          firewall check task time: {{
+            ((end_check.stdout | int) - (start_check.stdout | int)) / 1000000
+          }} ms
+
+
+
+    - name: Record start time (check)
+      ansible.builtin.command: date +%s%N
+      register: start_check
+
+    - name: Get UFW status
+      ansible.builtin.command: ufw status
+      register: ufw_status
+      changed_when: false
+
+    - name: Check if 192.168.233.21 is allowed
+      ansible.builtin.set_fact:
+        ip_allowed: "{{ 'ALLOW IN from 192.168.233.21' in ufw_status.stdout }}"
+
+    - name: Record end time (check)
+      ansible.builtin.command: date +%s%N
+      register: end_check
+
+    - name: Print result
+      ansible.builtin.debug:
+        msg: >
+          Traffic from 192.168.233.21 is {{
+            'ALLOWED' if ip_allowed else 'NOT allowed'
+          }}
+
+    - name: Print check execution time
+      ansible.builtin.debug:
+        msg: >
+          firewall check task time: {{
+            ((end_check.stdout | int) - (start_check.stdout | int)) / 1000000
+          }} ms
+
+
+
+    - name: Record start time (check)
+      ansible.builtin.command: date +%s%N
+      register: start_check
+
+    - name: Get UFW status
+      ansible.builtin.command: ufw status
+      register: ufw_status
+      changed_when: false
+
+    - name: Check if 192.168.233.21 is allowed
+      ansible.builtin.set_fact:
+        ip_allowed: "{{ 'ALLOW IN from 192.168.233.21' in ufw_status.stdout }}"
+
+    - name: Record end time (check)
+      ansible.builtin.command: date +%s%N
+      register: end_check
+
+    - name: Print result
+      ansible.builtin.debug:
+        msg: >
+          Traffic from 192.168.233.21 is {{
+            'ALLOWED' if ip_allowed else 'NOT allowed'
+          }}
+
+    - name: Print check execution time
+      ansible.builtin.debug:
+        msg: >
+          firewall check task time: {{
+            ((end_check.stdout | int) - (start_check.stdout | int)) / 1000000
+          }} ms
+
+
+    - name: Record start time (check)
+      ansible.builtin.command: date +%s%N
+      register: start_check
+
+    - name: Get UFW status
+      ansible.builtin.command: ufw status
+      register: ufw_status
+      changed_when: false
+
+    - name: Check if 192.168.233.21 is allowed
+      ansible.builtin.set_fact:
+        ip_allowed: "{{ 'ALLOW IN from 192.168.233.21' in ufw_status.stdout }}"
+
+    - name: Record end time (check)
+      ansible.builtin.command: date +%s%N
+      register: end_check
+
+    - name: Print result
+      ansible.builtin.debug:
+        msg: >
+          Traffic from 192.168.233.21 is {{
+            'ALLOWED' if ip_allowed else 'NOT allowed'
+          }}
+
+    - name: Print check execution time
+      ansible.builtin.debug:
+        msg: >
+          firewall check task time: {{
+            ((end_check.stdout | int) - (start_check.stdout | int)) / 1000000
+          }} ms

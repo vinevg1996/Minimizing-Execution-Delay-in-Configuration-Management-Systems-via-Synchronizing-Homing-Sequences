@@ -1,0 +1,234 @@
+- name: Create text.txt with timing
+  hosts: myhosts
+  gather_facts: false
+  tasks:
+    - name: Record start time (touch)
+      ansible.builtin.command: date +%s%N
+      register: start_touch
+
+    - name: Ensure file exists
+      ansible.builtin.file:
+        path: /home/vinevg1996/work_france/rtas26/ansible_quickstart/text.txt
+        state: touch
+        mode: '0644'
+
+    - name: Record end time (touch)
+      ansible.builtin.command: date +%s%N
+      register: end_touch
+
+    - name: Print touch execution time
+      ansible.builtin.debug:
+        msg: >
+          touch task time: {{
+            ((end_touch.stdout | int) - (start_touch.stdout | int)) / 1000000
+          }} ms
+
+    - name: Record start time (touch)
+      ansible.builtin.command: date +%s%N
+      register: start_touch
+
+    - name: Ensure file exists
+      ansible.builtin.file:
+        path: /home/vinevg1996/work_france/rtas26/ansible_quickstart/text.txt
+        state: touch
+        mode: '0644'
+
+    - name: Record end time (touch)
+      ansible.builtin.command: date +%s%N
+      register: end_touch
+
+    - name: Print touch execution time
+      ansible.builtin.debug:
+        msg: >
+          touch task time: {{
+            ((end_touch.stdout | int) - (start_touch.stdout | int)) / 1000000
+          }} ms
+
+    - name: Record start time (touch)
+      ansible.builtin.command: date +%s%N
+      register: start_touch
+
+    - name: Ensure file exists
+      ansible.builtin.file:
+        path: /home/vinevg1996/work_france/rtas26/ansible_quickstart/text.txt
+        state: touch
+        mode: '0644'
+
+    - name: Record end time (touch)
+      ansible.builtin.command: date +%s%N
+      register: end_touch
+
+    - name: Print touch execution time
+      ansible.builtin.debug:
+        msg: >
+          touch task time: {{
+            ((end_touch.stdout | int) - (start_touch.stdout | int)) / 1000000
+          }} ms
+
+    - name: Record start time (touch)
+      ansible.builtin.command: date +%s%N
+      register: start_touch
+
+    - name: Ensure file exists
+      ansible.builtin.file:
+        path: /home/vinevg1996/work_france/rtas26/ansible_quickstart/text.txt
+        state: touch
+        mode: '0644'
+
+    - name: Record end time (touch)
+      ansible.builtin.command: date +%s%N
+      register: end_touch
+
+    - name: Print touch execution time
+      ansible.builtin.debug:
+        msg: >
+          touch task time: {{
+            ((end_touch.stdout | int) - (start_touch.stdout | int)) / 1000000
+          }} ms
+
+    - name: Record start time (touch)
+      ansible.builtin.command: date +%s%N
+      register: start_touch
+
+    - name: Ensure file exists
+      ansible.builtin.file:
+        path: /home/vinevg1996/work_france/rtas26/ansible_quickstart/text.txt
+        state: touch
+        mode: '0644'
+
+    - name: Record end time (touch)
+      ansible.builtin.command: date +%s%N
+      register: end_touch
+
+    - name: Print touch execution time
+      ansible.builtin.debug:
+        msg: >
+          touch task time: {{
+            ((end_touch.stdout | int) - (start_touch.stdout | int)) / 1000000
+          }} ms
+
+    - name: Record start time (touch)
+      ansible.builtin.command: date +%s%N
+      register: start_touch
+
+    - name: Ensure file exists
+      ansible.builtin.file:
+        path: /home/vinevg1996/work_france/rtas26/ansible_quickstart/text.txt
+        state: touch
+        mode: '0644'
+
+    - name: Record end time (touch)
+      ansible.builtin.command: date +%s%N
+      register: end_touch
+
+    - name: Print touch execution time
+      ansible.builtin.debug:
+        msg: >
+          touch task time: {{
+            ((end_touch.stdout | int) - (start_touch.stdout | int)) / 1000000
+          }} ms
+
+    - name: Record start time (touch)
+      ansible.builtin.command: date +%s%N
+      register: start_touch
+
+    - name: Ensure file exists
+      ansible.builtin.file:
+        path: /home/vinevg1996/work_france/rtas26/ansible_quickstart/text.txt
+        state: touch
+        mode: '0644'
+
+    - name: Record end time (touch)
+      ansible.builtin.command: date +%s%N
+      register: end_touch
+
+    - name: Print touch execution time
+      ansible.builtin.debug:
+        msg: >
+          touch task time: {{
+            ((end_touch.stdout | int) - (start_touch.stdout | int)) / 1000000
+          }} ms
+
+    - name: Record start time (touch)
+      ansible.builtin.command: date +%s%N
+      register: start_touch
+
+    - name: Ensure file exists
+      ansible.builtin.file:
+        path: /home/vinevg1996/work_france/rtas26/ansible_quickstart/text.txt
+        state: touch
+        mode: '0644'
+
+    - name: Record end time (touch)
+      ansible.builtin.command: date +%s%N
+      register: end_touch
+
+    - name: Print touch execution time
+      ansible.builtin.debug:
+        msg: >
+          touch task time: {{
+            ((end_touch.stdout | int) - (start_touch.stdout | int)) / 1000000
+          }} ms
+
+    - name: Record start time (touch)
+      ansible.builtin.command: date +%s%N
+      register: start_touch
+
+    - name: Ensure file exists
+      ansible.builtin.file:
+        path: /home/vinevg1996/work_france/rtas26/ansible_quickstart/text.txt
+        state: touch
+        mode: '0644'
+
+    - name: Record end time (touch)
+      ansible.builtin.command: date +%s%N
+      register: end_touch
+
+    - name: Print touch execution time
+      ansible.builtin.debug:
+        msg: >
+          touch task time: {{
+            ((end_touch.stdout | int) - (start_touch.stdout | int)) / 1000000
+          }} ms
+
+    - name: Record start time (touch)
+      ansible.builtin.command: date +%s%N
+      register: start_touch
+
+    - name: Ensure file exists
+      ansible.builtin.file:
+        path: /home/vinevg1996/work_france/rtas26/ansible_quickstart/text.txt
+        state: touch
+        mode: '0644'
+
+    - name: Record end time (touch)
+      ansible.builtin.command: date +%s%N
+      register: end_touch
+
+    - name: Print touch execution time
+      ansible.builtin.debug:
+        msg: >
+          touch task time: {{
+            ((end_touch.stdout | int) - (start_touch.stdout | int)) / 1000000
+          }} ms
+
+    - name: Record start time (touch)
+      ansible.builtin.command: date +%s%N
+      register: start_touch
+
+    - name: Ensure file exists
+      ansible.builtin.file:
+        path: /home/vinevg1996/work_france/rtas26/ansible_quickstart/text.txt
+        state: touch
+        mode: '0644'
+
+    - name: Record end time (touch)
+      ansible.builtin.command: date +%s%N
+      register: end_touch
+
+    - name: Print touch execution time
+      ansible.builtin.debug:
+        msg: >
+          touch task time: {{
+            ((end_touch.stdout | int) - (start_touch.stdout | int)) / 1000000
+          }} ms

@@ -1,0 +1,108 @@
+- name: Create text.txt with timing
+  hosts: myhosts
+  gather_facts: false
+  tasks:
+    - name: Record start time (write)
+      ansible.builtin.command: date +%s%N
+      register: start_write
+
+    - name: Write "Hello" to text.txt
+      ansible.builtin.copy:
+        dest: /home/vinevg1996/work_france/rtas26/ansible_quickstart/text.txt
+        content: "Hello\n"
+        mode: '0644'
+
+    - name: Record end time (write)
+      ansible.builtin.command: date +%s%N
+      register: end_write
+
+    - name: Print write execution time
+      ansible.builtin.debug:
+        msg: >
+          write task time: {{
+            ((end_write.stdout | int) - (start_write.stdout | int)) / 1000000
+          }} ms
+
+    - name: Record start time (write)
+      ansible.builtin.command: date +%s%N
+      register: start_write
+
+    - name: Write "Hello" to text.txt
+      ansible.builtin.copy:
+        dest: /home/vinevg1996/work_france/rtas26/ansible_quickstart/text.txt
+        content: "Hello\n"
+        mode: '0644'
+
+    - name: Record end time (write)
+      ansible.builtin.command: date +%s%N
+      register: end_write
+
+    - name: Print write execution time
+      ansible.builtin.debug:
+        msg: >
+          write task time: {{
+            ((end_write.stdout | int) - (start_write.stdout | int)) / 1000000
+          }} ms
+
+    - name: Record start time (write)
+      ansible.builtin.command: date +%s%N
+      register: start_write
+
+    - name: Write "Hello" to text.txt
+      ansible.builtin.copy:
+        dest: /home/vinevg1996/work_france/rtas26/ansible_quickstart/text.txt
+        content: "Hello\n"
+        mode: '0644'
+
+    - name: Record end time (write)
+      ansible.builtin.command: date +%s%N
+      register: end_write
+
+    - name: Print write execution time
+      ansible.builtin.debug:
+        msg: >
+          write task time: {{
+            ((end_write.stdout | int) - (start_write.stdout | int)) / 1000000
+          }} ms
+
+    - name: Record start time (write)
+      ansible.builtin.command: date +%s%N
+      register: start_write
+
+    - name: Write "Hello" to text.txt
+      ansible.builtin.copy:
+        dest: /home/vinevg1996/work_france/rtas26/ansible_quickstart/text.txt
+        content: "Hello\n"
+        mode: '0644'
+
+    - name: Record end time (write)
+      ansible.builtin.command: date +%s%N
+      register: end_write
+
+    - name: Print write execution time
+      ansible.builtin.debug:
+        msg: >
+          write task time: {{
+            ((end_write.stdout | int) - (start_write.stdout | int)) / 1000000
+          }} ms
+
+    - name: Record start time (write)
+      ansible.builtin.command: date +%s%N
+      register: start_write
+
+    - name: Write "Hello" to text.txt
+      ansible.builtin.copy:
+        dest: /home/vinevg1996/work_france/rtas26/ansible_quickstart/text.txt
+        content: "Hello\n"
+        mode: '0644'
+
+    - name: Record end time (write)
+      ansible.builtin.command: date +%s%N
+      register: end_write
+
+    - name: Print write execution time
+      ansible.builtin.debug:
+        msg: >
+          write task time: {{
+            ((end_write.stdout | int) - (start_write.stdout | int)) / 1000000
+          }} ms
